@@ -1,0 +1,56 @@
+<!-- templates/tableau_de_bord.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>afficher toutes les Tables </title>
+</head>
+<body>
+    <h1>Tableau de Bord</h1>
+
+    <h1>Patients</h1>
+    <ul>
+        {% for patient in patients %}
+            <li>{{ patient.nom }}</li>
+        {% endfor %}
+    </ul>
+    <h1>Médecins</h1>
+    <ul>
+        {% for medecin in medecins %}
+            <li>{{ medecin }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Rendez-vous</h1>
+    <ul>
+        {% for rendezvous in rendezvous %}
+            <li>{{ rendezvous }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Dossiers Médicaux</h1>
+    <ul>
+        {% for dossier in dossiers %}
+            <li>{{ dossier }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Départements</h1>
+    <ul>
+        {% for departement in departements %}
+            <li>{{ departement }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Tâches de Département</h1>
+    <ul>
+        {% for tache in taches %}
+            <li>{{ tache }}</li>
+        {% endfor %}
+    </ul>
+
+
+
+</body>
+</html>
